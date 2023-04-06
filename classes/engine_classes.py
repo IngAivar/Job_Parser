@@ -11,7 +11,7 @@ from pathlib import Path
 
 from validator import VacancyApi
 
-path = Path('file.json')
+path = Path('jobs.json')
 
 dotenv_path = os.path.join(os.path.dirname(__file__), '../.env')  # Загружаю файл с ключом аутентификации для superjob
 if os.path.exists(dotenv_path):

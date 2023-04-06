@@ -15,8 +15,8 @@ def main():
 
     while True:
         user_selection = input('Введите 1 если хотите обновить данные.\n'
-                               ' Нажмите любую клавишу если хотите работать с существующими.\n'
-                               '  0 - Выход: ')
+                               'Нажмите любую клавишу если хотите работать с существующими.\n'
+                               '0 - Выход:\n')
         if user_selection == '1':
             del connector.data_file
             input_services = select_service()
@@ -60,3 +60,6 @@ def main():
                     print(HHVacancy(**item) if get_hh_from_url(item['url']) else SJVacancy(**item))
             else:
                 print('По вашему ключевому слову ничего не найдено')
+
+
+main()

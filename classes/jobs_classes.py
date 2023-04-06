@@ -2,7 +2,7 @@ from pathlib import Path
 
 from utility.utils import get_hh_from_url, get_superjob_from_url
 
-path = Path('file.json')
+path = Path('jobs.json')
 
 
 class Vacancy:

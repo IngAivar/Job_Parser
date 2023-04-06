@@ -9,7 +9,7 @@ def select_service():
     select_service_input = input('''Выберите номер сервиса для сбора данных: 1. HeadHunter
                                          2. SuperJob
                                          3. Оба сервиса 
-                                         0. Выход: ''')
+                                         0. Выход:\n''')
     if select_service_input == '0':
         sys.exit()
     elif select_service_input not in list_services:
@@ -27,7 +27,7 @@ def select_keyword():
                                2. django 
                                3. sql 
                                4. Java
-                               0. Выход: ''')
+                               0. Выход:\n''')
     if input_keyword == '0':
         sys.exit()
     elif input_keyword not in dict_keyword.keys():
@@ -59,7 +59,7 @@ def select_experience():
                                2. От 1 года до 3 лет
                                3. От 3 до 6 лет
                                4. От 6 лет
-                               0. Выход: ''')
+                               0. Выход:\n''')
     if user_input == '0':
         sys.exit()
     elif user_input not in dict_experience.keys():
