@@ -1,9 +1,10 @@
 from classes.classes import HeadHunterAPI, JSONSaver
+from utils.utils import sort_by_salary_min, sort_by_salary_max
 
 
 def main():
 
-    keyword = input("Введите ключевое слово по которому будет искаться вакансия: ")
+    # keyword = input("Введите ключевое слово по которому будет искаться вакансия: ")
     keyword = "python"
 
     # Создание экземпляра класса для работы с API сайтов с вакансиями
@@ -16,6 +17,13 @@ def main():
     # Сохранение информации о вакансиях в файл
     json_saver = JSONSaver(keyword)
     json_saver.add_vacancies(hh_vacancies)
+
+    data = json_saver.select()
+    data = sort_by_salary_min(data)
+    data = sort_by_salary_max(data)
+
+    for row in data:
+        print(row, end=f"\n\n{'=' * 250}\n\n")
     # json_saver.get_vacancies_by_salary("100 000-150 000 руб.")
     # json_saver.delete_vacancy(vacancy)
 
