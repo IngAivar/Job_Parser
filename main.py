@@ -47,6 +47,7 @@ def main():
     if user_answer[2]:
         filter_by_requirement(user_answer[2])  # фильтруем по фразе в требованиях
     print_result()  # вывод результатов
+    input("Нажмите Enter чтобы закончить работу программы.")
 
 
 main()
